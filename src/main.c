@@ -17,11 +17,7 @@ int main(int argc, char const* argv[]) {
 
 
     print_memory(&machine, 32);
-
-
-
-
-
+    print_registers(&machine);
 
 
     return EXIT_SUCCESS;

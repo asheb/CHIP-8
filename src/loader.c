@@ -14,5 +14,7 @@ void load_rom(chip8_machine* machine, char const* file_path) {
 
     int err = fclose(rom_file);
     if (err) exit_with_error("can't close the ROM file");
+
+    machine->instruction_pointer = PROGRAM_BASE_ADDRESS;
 }
 
