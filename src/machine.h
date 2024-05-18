@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdbool.h>
 #include <stdint.h>
 
 
@@ -7,6 +8,8 @@
 #define PROGRAM_BASE_ADDRESS 0x200
 #define STACK_SIZE 12
 #define DATA_REGISTERS_COUNT 16
+#define SCREEN_WIDTH 64
+#define SCREEN_HEIGHT 32
 
 
 typedef struct chip8_machine chip8_machine;
@@ -16,6 +19,9 @@ struct chip8_machine {
     uint16_t address_register_I;
     uint16_t return_addresses_stack[STACK_SIZE];
     uint16_t instruction_pointer;
+    bool screen[SCREEN_WIDTH][SCREEN_HEIGHT];
 };
 
+
+void process_current_instruction(chip8_machine* machine);
 
