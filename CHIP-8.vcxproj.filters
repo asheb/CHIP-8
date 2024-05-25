@@ -24,13 +24,16 @@
     <ClCompile Include="src\machine.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\display.c">
+    <ClCompile Include="src\ui.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\loader.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\windows.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

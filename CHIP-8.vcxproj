@@ -142,7 +142,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\debug.c" />
-    <ClCompile Include="src\display.c" />
+    <ClCompile Include="src\platform\windows.c" />
+    <ClCompile Include="src\ui.c" />
     <ClCompile Include="src\loader.c" />
     <ClCompile Include="src\machine.c" />
     <ClCompile Include="src\main.c" />
@@ -152,6 +153,8 @@
     <ClInclude Include="src\debug.h" />
     <ClInclude Include="src\loader.h" />
     <ClInclude Include="src\machine.h" />
+    <ClInclude Include="src\platform.h" />
+    <ClInclude Include="src\ui.h" />
     <ClInclude Include="src\util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

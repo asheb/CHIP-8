@@ -3,6 +3,8 @@
 #include "machine.h"
 #include "loader.h"
 #include "debug.h"
+#include "ui.h"
+#include "util.h"
 
 
 int main(int argc, char const* argv[]) {
@@ -11,19 +13,19 @@ int main(int argc, char const* argv[]) {
         return EXIT_FAILURE;
     }
 
-    chip8_machine machine = { 0 };
+    UI_State ui = { 0 };
+    init_UI(&ui);
+
+    CHIP8_Machine machine = { 0 };
 
     load_rom(&machine, argv[1]);
-
-    print_memory(&machine, 32, PROGRAM_BASE_ADDRESS, 0x200);
-    print_registers(&machine);
+    //fill_screen_with_pattern(&machine); // for debug
 
     for (;;) {
-        putchar('\n');
+        redraw_debug_UI(&machine);
+        wait_any_key();
         process_current_instruction(&machine);
-        print_registers(&machine);
     }
-
 
     //return EXIT_SUCCESS;
 }

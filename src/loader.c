@@ -4,7 +4,7 @@
 #include "util.h"
 
 
-void load_rom(chip8_machine* machine, char const* file_path) {
+void load_rom(CHIP8_Machine* machine, char const* file_path) {
     FILE* rom_file = fopen(file_path, "rb");
     if (!rom_file) exit_with_error("can't open the ROM file");
 
